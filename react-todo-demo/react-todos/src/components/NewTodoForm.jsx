@@ -1,5 +1,5 @@
 import {useState} from 'react'
-export function NewTodoForm()
+export function NewTodoForm( {addTodo})
 {
     const [assigned, setAssigned] = useState('')
     const[description, setDescription] = useState('')
@@ -8,8 +8,7 @@ export function NewTodoForm()
         e.preventDefault();
 
         if(assigned.trim() && description.trim()){
-            console.log(assigned)
-            console.log(description)
+          addTodo(assigned.trim(), description.trim())
 
             setAssigned('')
             setDescription('')

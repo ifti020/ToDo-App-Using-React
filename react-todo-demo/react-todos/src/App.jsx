@@ -17,14 +17,24 @@ function App() {
 
     const [todos, setTodos] = useState(initialTodos)
 
-        const addTodo = () => {
+        const addTodo = (assigned, description) => {
+            let newRowNumber
+            if(todos.length > 0)
+            {
+                newRowNumber = todos[todos.length -1].rowNumber +1;
+            }
+            else
+            {
+                newRowNumber = 1
+            }
+
       const newTodo = {
-          rowNumber: 10,
-          rowDescription: 'new Todo',
-                rowAssigned:"User 3",
+                rowNumber: newRowNumber ,
+                rowDescription: description,
+                rowAssigned:assigned
             }
            setTodos([...todos,newTodo])
-            console.log(todos)
+
         }
   return (
       <div className='full-table'>
@@ -38,7 +48,7 @@ function App() {
             <button onClick={addTodo}>Click Me!</button>
           </div>
         </div>
-          <NewTodoForm></NewTodoForm>
+          <NewTodoForm addTodo={addTodo}></NewTodoForm>
       </div>
   )
 }
