@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-      <div>
+      <div className='full-table'>
         <div>
           <div>
             Your Todo's
