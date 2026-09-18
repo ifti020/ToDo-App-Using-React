@@ -36,6 +36,12 @@ function App() {
            setTodos([...todos,newTodo])
 
         }
+
+    const deleteTodo = (deleteTodoRowNumber) =>{
+        const filtered = todos.filter(todo=>todo.rowNumber !== deleteTodoRowNumber)
+        setTodos(filtered)
+    }
+
   return (
       <div className='full-table'>
         <div>
@@ -44,7 +50,7 @@ function App() {
           </div>
           <div>
 
-            <ToDoTable todos={todos}></ToDoTable>
+            <ToDoTable todos={todos} deleteTodo={deleteTodo}></ToDoTable>
             <button onClick={addTodo}>Click Me!</button>
           </div>
         </div>

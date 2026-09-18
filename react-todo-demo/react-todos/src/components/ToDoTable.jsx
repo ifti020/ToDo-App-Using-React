@@ -20,7 +20,7 @@ export function ToDoTable(props) {
 
         {/*here we looping through each item in our array,pooling out each item and then assigningit to the to-do item*/}
         {props.todos.map(todo => (
-            <TodoRowItem key={todo.rowNumber} todo={todo}/>
+            <TodoRowItem key={todo.rowNumber} todo={todo} deleteTodo={props.deleteTodo} />
         ) ) }
         </tbody>
         </table>
