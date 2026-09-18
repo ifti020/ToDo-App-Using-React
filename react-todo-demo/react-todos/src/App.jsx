@@ -13,6 +13,15 @@ function App() {
       {rowNumber: 5, rowDescription: 'Clean Room', rowAssigned:"User 5"}
   ]
 
+        const addTodo = () => {
+      const newTodo = {
+          rowNumber: 10,
+          rowDescription: 'new Todo',
+                rowAssigned:"User 3",
+            }
+            todos.push(newTodo)
+            console.log(todos)
+        }
   return (
       <div className='full-table'>
         <div>
@@ -22,6 +31,7 @@ function App() {
           <div>
 
             <ToDoTable todos={todos}></ToDoTable>
+            <button onClick={addTodo}>Click Me!</button>
 
           </div>
         </div>
