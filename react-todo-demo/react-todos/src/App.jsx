@@ -5,6 +5,13 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const todos= [
+      {rowNumber: 1, rowDescription: 'Feed Chicken', rowAssigned:"User 1"},
+      {rowNumber: 1, rowDescription: 'Water Plants', rowAssigned:"User 2"},
+      {rowNumber: 1, rowDescription: 'Make Dinner', rowAssigned:"User 3"},
+    {rowNumber: 1, rowDescription: 'Practice Coding', rowAssigned:"User 4"}
+  ]
+
   return (
       <div className='full-table'>
         <div>
@@ -21,22 +28,13 @@ function App() {
               </tr>
               </thead>
               <tbody>
-                <TodoRowItem/>
-                <TodoRowItem/>
-                <TodoRowItem/>
-                <TodoRowItem/>
-                <TodoRowItem/>
 
-              <tr>
-                <td>2</td>
-                <td>Get HairCut</td>
-                <td>Ifti Haque</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Clean Desk</td>
-                <td>Ifti Haque</td>
-              </tr>
+                <TodoRowItem todo={todos[0]}/>
+                <TodoRowItem todo={todos[1]}/>
+                <TodoRowItem todo={todos[2]}/>
+                <TodoRowItem todo={todos[3]}/>
+
+
               </tbody>
             </table>
           </div>

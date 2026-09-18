@@ -1,8 +1,8 @@
-export function TodoRowItem(){
+export function TodoRowItem(props){
 
-    const rowNumber = 1
-    const rowDescription = 'Feed Chicken'
-    const rowAssigned = 'Ifti Haque'
+    const rowNumber = props.todo.rowNumber
+    const rowDescription = props.todo.rowDescription
+    const rowAssigned = props.todo.rowAssigned
 
     return(
 
