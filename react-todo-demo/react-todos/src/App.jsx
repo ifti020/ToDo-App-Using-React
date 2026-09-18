@@ -2,10 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import {ToDoTable} from "./components/ToDoTable.jsx";
 
+
 function App() {
   const [count, setCount] = useState(0)
 
-  const todos= [
+  const initialTodos= [
       {rowNumber: 1, rowDescription: 'Feed Chicken', rowAssigned:"User 1"},
       {rowNumber: 2, rowDescription: 'Water Plants', rowAssigned:"User 2"},
       {rowNumber: 3, rowDescription: 'Make Dinner', rowAssigned:"User 3"},
@@ -13,13 +14,15 @@ function App() {
       {rowNumber: 5, rowDescription: 'Clean Room', rowAssigned:"User 5"}
   ]
 
+    const [todos, setTodos] = useState(initialTodos)
+
         const addTodo = () => {
       const newTodo = {
           rowNumber: 10,
           rowDescription: 'new Todo',
                 rowAssigned:"User 3",
             }
-            todos.push(newTodo)
+           setTodos([...todos,newTodo])
             console.log(todos)
         }
   return (
