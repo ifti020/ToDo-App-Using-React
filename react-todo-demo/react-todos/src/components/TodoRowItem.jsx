@@ -1,10 +1,15 @@
 export function TodoRowItem(){
+
+    const rowNumber = 1
+    const rowDescription = 'Feed Chicken'
+    const rowAssigned = 'Ifti Haque'
+
     return(
 
         <tr>
-            <td>1</td>
-            <td>Feed Chicken</td>
-            <td>Ifti Haque</td>
+            <td>{rowNumber}</td>
+            <td>{rowDescription}</td>
+            <td>{rowAssigned}</td>
         </tr>
     )
 }
