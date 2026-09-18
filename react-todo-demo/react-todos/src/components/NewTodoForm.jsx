@@ -22,7 +22,7 @@ export function NewTodoForm( {addTodo})
         <div>
             <form onSubmit={handleSubmit}>
             <div>
-                <label>Assigned Task</label>
+                <label>Target Deadline</label>
                 <input
                     type = "text"
                     required

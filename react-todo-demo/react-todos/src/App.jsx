@@ -8,13 +8,14 @@ function App() {
   const [count, setCount] = useState(0)
 
   const initialTodos= [
-      {rowNumber: 1, rowDescription: 'Feed Chicken', rowAssigned:"User 1"},
-      {rowNumber: 2, rowDescription: 'Water Plants', rowAssigned:"User 2"},
-      {rowNumber: 3, rowDescription: 'Make Dinner', rowAssigned:"User 3"},
-      {rowNumber: 4, rowDescription: 'Practice Coding', rowAssigned:"User 4"},
-      {rowNumber: 5, rowDescription: 'Clean Room', rowAssigned:"User 5"}
+      {rowNumber: 1, rowDescription: 'Feed Chicken', rowAssigned:"Today"},
+      {rowNumber: 2, rowDescription: 'Water Plants', rowAssigned:"Tomorrow"},
+      {rowNumber: 3, rowDescription: 'Make Dinner', rowAssigned:"By 5 PM"},
+      {rowNumber: 4, rowDescription: 'Practice Coding', rowAssigned:"Next Week"},
+      {rowNumber: 5, rowDescription: 'Clean Room', rowAssigned:"Sunday"}
   ]
 
+    const [showForm, setShowForm] = useState(false)
     const [todos, setTodos] = useState(initialTodos)
 
         const addTodo = (assigned, description) => {
@@ -42,6 +43,8 @@ function App() {
         setTodos(filtered)
     }
 
+
+
   return (
       <div className='full-table'>
         <div>
@@ -51,10 +54,11 @@ function App() {
           <div>
 
             <ToDoTable todos={todos} deleteTodo={deleteTodo}></ToDoTable>
-            <button onClick={addTodo}>Click Me!</button>
+            <button onClick={()=> setShowForm(!showForm)}>
+                {showForm ? 'Close Form': 'Add New Todo'}</button>
           </div>
         </div>
-          <NewTodoForm addTodo={addTodo}></NewTodoForm>
+          {showForm && <NewTodoForm addTodo={addTodo}></NewTodoForm>}
       </div>
   )
 }

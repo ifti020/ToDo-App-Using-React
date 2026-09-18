@@ -10,7 +10,8 @@ export function ToDoTable(props) {
             <tr>
                 <th>#</th>
                 <th>Description</th>
-                <th>Assigned</th>
+                <th>Deadline</th>
+                <th>Actions</th>
             </tr>
             </thead>
         <tbody>
