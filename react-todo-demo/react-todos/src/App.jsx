@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import {TodoRowItem} from "./components/TodoRowItem";
 import './App.css'
+import {ToDoTable} from "./components/ToDoTable.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,24 +19,9 @@ function App() {
             Your Todo's
           </div>
           <div>
-            <table>
-              <thead>
-              <tr>
-                <th>#</th>
-                <th>Description</th>
-                <th>Assigned</th>
-              </tr>
-              </thead>
-              <tbody>
 
-                <TodoRowItem todo={todos[0]}/>
-                <TodoRowItem todo={todos[1]}/>
-                <TodoRowItem todo={todos[2]}/>
-                <TodoRowItem todo={todos[3]}/>
+            <ToDoTable todos={todos}></ToDoTable>
 
-
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
