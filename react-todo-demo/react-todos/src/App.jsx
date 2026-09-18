@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import {TodoRowItem} from "./components/TodoRowItem";
 import './App.css'
 
 function App() {
@@ -23,11 +21,7 @@ function App() {
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td>1</td>
-                <td>Feed Chicken</td>
-                <td>Ifti Haque</td>
-              </tr>
+                <TodoRowItem/>
               <tr>
                 <td>2</td>
                 <td>Get HairCut</td>
