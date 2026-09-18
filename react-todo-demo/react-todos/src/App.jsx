@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import {NewTodoForm} from "./components/NewTodoForm"
 import {ToDoTable} from "./components/ToDoTable.jsx";
 
 
@@ -35,9 +36,9 @@ function App() {
 
             <ToDoTable todos={todos}></ToDoTable>
             <button onClick={addTodo}>Click Me!</button>
-
           </div>
         </div>
+          <NewTodoForm></NewTodoForm>
       </div>
   )
 }
