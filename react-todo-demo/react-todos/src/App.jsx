@@ -7,9 +7,10 @@ function App() {
 
   const todos= [
       {rowNumber: 1, rowDescription: 'Feed Chicken', rowAssigned:"User 1"},
-      {rowNumber: 1, rowDescription: 'Water Plants', rowAssigned:"User 2"},
-      {rowNumber: 1, rowDescription: 'Make Dinner', rowAssigned:"User 3"},
-    {rowNumber: 1, rowDescription: 'Practice Coding', rowAssigned:"User 4"}
+      {rowNumber: 2, rowDescription: 'Water Plants', rowAssigned:"User 2"},
+      {rowNumber: 3, rowDescription: 'Make Dinner', rowAssigned:"User 3"},
+      {rowNumber: 4, rowDescription: 'Practice Coding', rowAssigned:"User 4"},
+      {rowNumber: 5, rowDescription: 'Clean Room', rowAssigned:"User 5"}
   ]
 
   return (
